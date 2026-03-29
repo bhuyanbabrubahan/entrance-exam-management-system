@@ -1,0 +1,284 @@
+/* =========================================
+   ADMIN CANDIDATE DETAILS PAGE
+========================================= */
+
+.admin-profile-container {
+  padding: 30px;
+  background: #f4f7fb;
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+
+/* =========================================
+   HEADER CARD (GRADIENT STYLE)
+========================================= */
+
+.profile-header-card {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.profile-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+
+/* =========================================
+   HEADER LEFT SECTION
+========================================= */
+
+.profile-left-section {
+  display: flex;
+  gap: 25px;
+  flex: 1;
+}
+
+.profile-photo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  background: #e5e7eb;
+}
+
+.profile-info h2 {
+  margin: 0 0 12px 0;
+  font-size: 16px;
+  font-weight: 700;   /* Bold */
+  color: #1fcd1f;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   STATUS BADGES
+========================================= */
+
+.status-row {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.status-badge {
+  background: #357f17;
+  color: #1e3c72;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   HEADER RIGHT SECTION
+========================================= */
+
+.profile-right-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+  background: white;
+  color: #1e3c72;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #e6e6e6;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   DETAILS CARDS
+========================================= */
+
+.details-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+.details-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.details-card h4 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+
+/* =========================================
+   GRID LAYOUT
+========================================= */
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px 25px;
+  margin-bottom: 15px;
+}
+
+.details-grid p {
+  font-size: 0.9rem;
+  color: #374151;
+  margin: 0;
+}
+
+
+/* =========================================
+   DOCUMENTS SECTION
+========================================= */
+
+.documents-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.documents-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.documents-grid img {
+  width: 160px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  padding: 6px;
+}
+
+.view-doc-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: 0.3s ease;
+}
+
+.view-doc-btn:hover {
+  background: #1d4ed8;
+}
+
+
+/* =========================================
+   EMPTY / NO DATA MESSAGE
+========================================= */
+
+.empty-section {
+  padding: 20px;
+  background: #fff3f3;
+  color: #c62828;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.no-data {
+  padding: 15px;
+  background: #fff4e5;
+  color: #cc7a00;
+  border-left: 4px solid #ffa500;
+  border-radius: 6px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+
+/* =========================================
+   LOADING & ERROR STATES
+========================================= */
+
+.loading {
+  padding: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563eb;
+  text-align: center;
+}
+
+.error {
+  padding: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dc2626;
+  text-align: center;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 768px) {
+
+  .profile-header-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-left-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-right-section {
+    width: 100%;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .profile-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .documents-grid {
+    justify-content: center;
+  }
+}

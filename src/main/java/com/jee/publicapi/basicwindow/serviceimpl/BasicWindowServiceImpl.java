@@ -145,6 +145,7 @@ public class BasicWindowServiceImpl implements BasicWindowService {
 
         window.setActive(false);
         window.setDeActivatedAt(LocalDateTime.now());   // 🔹 store deactivated time
+        
         window.setDeActivatedByAdmin(true);            // 🔹 mark as admin deactivated
 
         windowRepository.save(window);

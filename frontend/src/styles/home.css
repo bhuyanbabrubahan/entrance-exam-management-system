@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: white;
+}
+
+
+
+section {
+  padding: 20px;
+  background: white;
+  margin: 15px;
+}
+
+.footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}

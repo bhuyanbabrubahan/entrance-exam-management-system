@@ -1,0 +1,185 @@
+/* =====================================================
+   MAIN NOTICE CONTAINER
+   ===================================================== */
+.notice-box {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   TABS (Public Notices / News & Events)
+   ===================================================== */
+.notice-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.notice-tabs button {
+  padding: 5px 12px; /* SMALL */
+  font-size: 13px;
+  background: #f2f2f2;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  cursor: pointer;
+}
+
+.notice-tabs button.active {
+  background: #ffffff;
+  font-weight: 600;
+}
+
+/* =====================================================
+   CONTENT AREA
+   ===================================================== */
+.notice-content {
+  flex: 1;
+  overflow-y: auto;
+  max-height: 320px;
+  padding-right: 8px; /* space for scrollbar */
+}
+
+.notice-content ul {
+  padding-left: 18px;
+}
+
+.notice-content li {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+/* =====================================================
+   PRIORITY BADGES (LIVE / NEW)
+   ===================================================== */
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  margin-right: 6px;
+  border-radius: 2px;
+}
+
+.badge.live {
+  background: #c62828;
+  color: #ffffff;
+}
+
+.badge.new {
+  background: #2e7d32;
+  color: #ffffff;
+}
+
+/* =====================================================
+   PAGINATION SECTION (LEFT | CENTER | RIGHT)
+   ===================================================== */
+.pagination {
+  display: grid;
+  grid-template-columns: auto 1fr auto; /* Prev | Page | Next */
+  align-items: center;
+  margin-top: 10px;
+  font-size: 12px;
+  width: 100%;
+  gap: 5px;
+}
+
+/* ===============================
+   SHARED PAGINATION BUTTON STYLE
+   =============================== */
+.page-btn,
+.view-all-btn {
+  font-size: 12px; /* SMALL TEXT */
+  width: 80px;     /* SMALL WIDTH */
+  padding: 5px 0;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  border-radius: 2px;
+  text-align: center;
+}
+
+/* PREVIOUS BUTTON → LEFT (GREEN) */
+.page-btn.prev {
+  justify-self: start;
+  background-color: #1b5e20;
+}
+
+.page-btn.prev:hover {
+  background-color: #0d3d14;
+}
+
+/* NEXT BUTTON → RIGHT (BLUE) */
+.page-btn.next {
+  justify-self: end;
+  background-color: #0d47a1;
+}
+
+.page-btn.next:hover {
+  background-color: #002f6c;
+}
+
+/* DISABLED STATE */
+.page-btn:disabled,
+.view-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* PAGE INFO → CENTER */
+.page-info {
+  text-align: center;
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* =====================================================
+   VIEW ALL BUTTON (SMALL, MATCH PREV/NEXT)
+   ===================================================== */
+.view-all-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.view-all-btn {
+  background-color: #743665; /* same as Prev button */
+}
+
+.view-all-btn:hover {
+  background-color: #dcf125;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+   ===================================================== */
+@media (max-width: 768px) {
+  .notice-content {
+    max-height: none;
+  }
+
+  .pagination {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .page-btn.prev,
+  .page-btn.next,
+  .view-all-btn {
+    justify-self: center;
+    width: 100px; /* slightly wider on mobile */
+  }
+}
+
+
+.page-btn:disabled,
+.view-all-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

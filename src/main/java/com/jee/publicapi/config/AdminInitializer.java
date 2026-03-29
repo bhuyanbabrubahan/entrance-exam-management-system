@@ -36,7 +36,6 @@ public class AdminInitializer {
 
                 repo.save(admin);
 
-                System.out.println("✅ Default admin created: admin@jee.com / Admin@123");
             }
         };
     }

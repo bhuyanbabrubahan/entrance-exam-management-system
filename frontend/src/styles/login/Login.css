@@ -1,0 +1,126 @@
+:root {
+  --primary: #007a8a;
+  --primary-dark: #005f6b;
+  --secondary: #003f4f;
+  --admin: #8a0000;
+  --success: #2e7d32;
+  --danger: #c62828;
+  --text-dark: #333;
+  --bg-light: #f5f7f9;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b5c6b;
+}
+
+/* =========================================================
+   LOGIN WRAPPER
+   UPDATED:
+   - Removed vertical centering
+   - Added top spacing so card appears under Header
+   ========================================================= */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* UPDATED: move card to top instead of center */
+  padding-top: 40px;       /* UPDATED: space below Header */
+  min-height: calc(100vh - 60px);
+}
+
+/* =========================================================
+   LOGIN CARD
+   UPDATED:
+   - Slightly increased width for better form spacing
+   ========================================================= */
+.login-card {
+  width: 420px;            /* UPDATED: increased from 360px */
+  background: #ffffff;
+  padding: 24px;           /* UPDATED: slightly more padding */
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+.login-card h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.login-subtitle {
+  font-size: 12px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 12px;
+  margin-top: 12px;
+  display: block;
+}
+
+label span {
+  color: red;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 9px;
+  background: #007a8a;
+  color: white;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #005f6b;
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.login-links a {
+  font-size: 11px;
+  color: #007a8a;
+  text-decoration: none;
+}
+
+.register-section {
+  text-align: center;
+  margin-top: 18px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.register-section p {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.register-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #004b5a;
+  text-decoration: none;
+}
+
+.register-btn img {
+  width: 16px;
+}

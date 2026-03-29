@@ -1,0 +1,343 @@
+/* =========================================================
+   BASE STYLES
+========================================================= */
+body {
+  background: #f4f6f8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+/* Main wrapper for dashboard pages */
+.dashboard-wrapper {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+/* =========================================================
+   DASHBOARD LAYOUT
+========================================================= */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 20px;
+}
+
+/* =========================================================
+   PROFILE CARD (LEFT PANEL)
+========================================================= */
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 15px;
+  text-align: center;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.profile-card h4 {
+  margin: 8px 0 4px;
+  font-size: 15px;
+}
+
+.profile-card .app-no {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  font-size: 13px;
+  margin: 4px 0;
+}
+/*======Application status======*/
+.application-status {
+  color: #282f58;   /* dark blue */
+  font-weight: 700; /* bold */
+  font-size: 12px;
+}
+/* =========================================================
+   MAIN CONTENT AREA
+========================================================= */
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================================================
+   DASHBOARD / FORM CARDS
+========================================================= */
+.dashboard-card {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.dashboard-card h3,
+.dashboard-card h4 {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* =========================================================
+   FORM LAYOUT (NEW – IMPORTANT PART)
+========================================================= */
+
+/* Base form row */
+.form-row {
+  display: grid;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+/* 🔹 THREE COLUMN ROW (First, Middle, Last Name) */
+.form-row.three-col {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 13px;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+/* Inputs */
+.form-group input,
+.form-group select {
+  height: 34px;
+  padding: 6px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  border: 1px solid #cfd6dd;
+}
+
+/* Read-only fields */
+.form-group input[readonly] {
+  background: #f1f1f1;
+  color: #666;
+}
+
+/* =========================================================
+   PROGRESS BAR
+========================================================= */
+.progress-bar {
+  height: 14px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2e7d32; /*progress bar*/
+}
+
+/* =========================================================
+   GRID STEPS
+========================================================= */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  
+}
+
+.step-card {
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 16px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+.step-card .status {
+  margin-bottom: 10px;
+}
+
+.step-card.completed {
+  background: #ffffff;
+  border-left: 4px solid #2e7d32;
+}
+
+.step-card.active {
+  background: #ffffff;
+  border-left: 4px solid #0d47a1;
+}
+
+.step-card.locked {
+  background: #ffffff;
+  opacity: 0.85;
+}
+/* FORCE TEXT COLOR INSIDE STEP CARDS */
+.step-card h4,
+.step-card .status,
+.step-card p {
+  color: #1a1a1a !important;
+}
+/* =========================================================
+   STATUS COLORS
+========================================================= */
+.green {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.red {
+  color: #c62828;
+  font-weight: bold;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+  padding: 6px 14px;        /* same as yours */
+  font-size: 13px;          /* same as yours */
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+}
+
+/* PRIMARY */
+.btn.primary {
+  background: #0d47a1;
+  color: #ffffff;
+}
+
+/* VIEW */
+.btn.view {
+  background: #e8f0fe;
+  color: #0d47a1;
+  border: 1px solid #90caf9;
+}
+
+/* LOCKED (normal state) */
+.btn.locked {
+  background: #eeeeee;
+  color: #6b7280;   /* readable grey */
+  border: 1px solid #d6d6d6;
+  cursor: not-allowed;
+}
+
+/* LOCKED + DISABLED (important fix) */
+button.btn.locked:disabled {
+  background: #eeeeee;
+  color: #6b7280;
+  border: 1px solid #d6d6d6;
+  opacity: 1;                 /* prevent browser fade */
+  cursor: not-allowed;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+/* OUTLINE */
+.btn.outline {
+  background: #fff;
+  border: 1px solid #0d47a1;
+  color: #0d47a1;
+}
+
+/* DANGER */
+.btn.danger {
+  background: #b71c1c;
+  color: #ffffff;
+}
+
+/* GLOBAL DISABLED FIX (does NOT change size) */
+button.btn:disabled {
+  opacity: 1;
+}
+
+/* =========================================================
+   NOTICES
+========================================================= */
+.notice-list {
+  padding-left: 18px;
+}
+
+.notice-list li {
+  margin-bottom: 6px;
+}
+
+/* =========================================================
+   ACTION GROUPS
+========================================================= */
+.download-actions,
+.account-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   CORRECTION SECTION
+========================================================= */
+.correction-section {
+  border-left: 4px solid #ff9800;
+}
+
+.correction-box p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.pending {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+/* =========================================================
+   GRIEVANCE SECTION
+========================================================= */
+.grievance-section {
+  border-left: 4px solid #6a1b9a;
+}
+
+.grievance-section p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE DESIGN
+========================================================= */
+@media (max-width: 900px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Stack name fields on smaller screens */
+  .form-row.three-col {
+    grid-template-columns: 1fr;
+  }
+}

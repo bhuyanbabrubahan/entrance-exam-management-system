@@ -16,8 +16,8 @@ public class JeeEntranceExamApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JeeEntranceExamApplication.class, args);
 		System.out.println("Application running...");
-		System.out.println(System.getProperty("DB_USERNAME"));
-		System.out.println(System.getenv("DB_USERNAME"));
+		//System.out.println(System.getProperty("DB_USERNAME"));
+		//System.out.println(System.getenv("DB_USERNAME"));
 		
 	}
 }

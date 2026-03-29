@@ -1,0 +1,100 @@
+/* =========================
+   HERO SECTION STYLING
+   ========================= */
+
+.hero {
+  text-align: center;          /* Center text and buttons */
+  padding: 15px 7px;          /* Space inside hero */
+  background-color: #e6f0ff;   /* Light blue background */
+}
+
+/* Hero heading */
+.hero h2 {
+  font-size: 15px;             /* Small heading size */
+  margin-bottom: 20px;         /* Space below heading */
+  color: #003366;              /* Dark blue text */
+  font-weight: 700;
+}
+
+/* =========================
+   BUTTON CONTAINER
+   ========================= */
+   
+
+.hero-buttons {
+  display: flex;               /* Align buttons horizontally */
+  justify-content: center;     /* Center buttons */
+  align-items: center;
+  gap: 10px;                   /* Space between buttons */
+  flex-wrap: nowrap;           /* Force single line */
+}
+
+/* =========================
+   BASE BUTTON STYLE
+   (shared by all buttons)
+   ========================= */
+
+.btn {
+  font-size: 12px;             /* Small text */
+  width: 140px;         /* 👈 change this value */
+  padding: 6px 0;             /* Compact button size */
+  border-radius: 3px;          /* Slight rounding */
+  cursor: pointer;
+  white-space: nowrap;         /* Prevent text breaking */
+  border: none;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   PRIMARY BUTTON (Apply)
+   ========================= */
+
+.primary-btn {  
+  background-color: none;   
+  color: #ffffff;
+  font-weight: 100;
+
+  /* 🔽 FIX */
+  width: auto;              /* auto fit content */
+  padding: 6px 14px;        /* more horizontal space */
+  min-width: unset;         /* remove forced min width */     /* width: 180px; increase */ 
+  white-space: nowrap;      /* keep text in one line */
+}
+
+
+/* =========================
+   SECONDARY BUTTON (User)
+   ========================= */
+
+.secondary-btn {
+  background-color: #666666;   /* Grey */
+  color: #ffffff;
+}
+
+/* =========================
+   OUTLINE BUTTON (Admin)
+   ========================= */
+
+.outline-btn {
+  background-color: #c0047b;
+  color: #f2ecf1;
+  border: 1px solid #d2b9bb;
+}
+
+/* =========================
+   HOVER EFFECT
+   ========================= */
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* =========================
+   MOBILE SUPPORT
+   ========================= */
+
+@media (max-width: 600px) {
+  .hero-buttons {
+    flex-wrap: wrap;           /* Wrap buttons on small screens */
+  }
+}

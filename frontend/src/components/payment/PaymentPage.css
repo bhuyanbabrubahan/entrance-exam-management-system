@@ -1,0 +1,133 @@
+.payment-page{
+  background:#f4f6f9;
+  min-height:100vh;
+}
+
+/* CONTAINER */
+
+.payment-container {
+  margin-bottom:240px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* TITLE */
+
+.payment-title {
+  text-align:center;
+  font-size:28px;
+  font-weight:600;
+  margin-bottom:20px;
+  color:#333;
+}
+
+/* CARD */
+
+.payment-card {
+  width:500px;
+  background:white;
+  border-radius:10px;
+  padding:60px;
+  box-shadow:0px 8px 25px rgba(0,0,0,0.08);
+}
+
+/* SECTION TITLE */
+
+.section-title{
+
+  font-size:15px;
+  font-weight:600;
+  color:#444;
+  margin-bottom:12px;
+}
+
+.payment-section{
+  margin-top:20px;
+}
+
+/* ROW */
+
+.payment-row{
+
+  display:flex;
+  justify-content:space-between;
+  padding:12px 0;
+  border-bottom:1px solid #eee;
+  font-size:12px;
+  color:#333;
+}
+
+/* FEE HIGHLIGHT */
+
+.payment-row.fee{
+  font-weight:bold;
+  font-size:15px;
+  color:#0a6dfd;
+}
+
+/* BUTTON AREA */
+
+.payment-buttons{
+  margin-top:10px;
+  display:flex;
+  gap:10px;
+}
+
+/* PAY BUTTON */
+
+.pay-btn{
+
+  flex:1;
+  padding:13px;
+  background:#28a745;
+  color:white;
+  border:none;
+  border-radius:6px;
+  font-size:15px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.pay-btn:hover{
+  background:#218838;
+}
+
+/* FAILURE BUTTON */
+
+.fail-btn{
+  flex:1;
+  padding:13px;
+  background:#dc3545;
+  color:white;
+  border:none;
+  border-radius:6px;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.fail-btn:hover{
+  background:#c82333;
+}
+
+/* LOADING */
+
+.loading-text{
+  font-size:16px;
+  color:#666;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .payment-card{
+    width:90%;
+  }
+
+  .payment-title{
+    font-size:24px;
+  }
+
+}

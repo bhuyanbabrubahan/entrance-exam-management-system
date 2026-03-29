@@ -1,0 +1,177 @@
+/* ===== Container ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 24px;            /* 🔽 reduced height */
+  background-color: #ffffff;
+  border-bottom: 3px solid #003366;
+  position: relative;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: auto;
+}
+
+/* ===== Left Section - Emblem ===== */
+.header-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  z-index: 2;
+}
+
+.emblem {
+  width: 150px;                 /* 🔽 slightly reduced */
+  height: auto;
+  margin-right: 16px;
+}
+
+/* ===== Center Section - Header Text ===== */
+.header-center {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  padding: 2px 0;               /* 🔽 tighter */
+}
+
+.header-center h1 {
+  font-size: 1.7rem;            /* 🔽 reduced */
+  font-weight: 700;
+  margin: 0;
+  color: #003366;
+  line-height: 1.2;
+}
+
+.header-center h2 {
+  font-size: 1.2rem;            /* 🔽 reduced */
+  margin: 0;
+  color: #003366;
+  line-height: 1.2;
+}
+
+.header-center h3 {
+  font-size: 1rem;              /* 🔽 reduced */
+  margin: 0;
+  color: #555555;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* ===== Right Section - Logos ===== */
+.header-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;                    /* 🔽 slightly tighter */
+  z-index: 2;
+}
+
+.logo {
+  width: 130px;                 /* 🔽 slightly reduced */
+  height: auto;
+}
+
+/* ===== Banner Effect ===== */
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50px;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(135deg, #003366 0%, #0055a5 100%);
+  border-radius: 50% 50% 0 0 / 60% 60% 0 0;
+  transform: rotate(-2deg);
+  z-index: 1;
+  opacity: 0.08;                /* 🔽 lighter = cleaner */
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .emblem {
+    width: 110px;
+  }
+
+  .logo {
+    width: 110px;
+  }
+
+  .header-center h1 {
+    font-size: 1.5rem;
+  }
+
+  .header-center h2 {
+    font-size: 1.15rem;
+  }
+
+  .header-center h3 {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 12px;         /* 🔽 compact mobile */
+  }
+
+  .header-left,
+  .header-center,
+  .header-right {
+    justify-content: center;
+    margin: 4px 0;
+  }
+
+  .header-right {
+    gap: 12px;
+  }
+
+  .emblem {
+    width: 85px;
+  }
+
+  .logo {
+    width: 95px;
+  }
+
+  .header-center h1 {
+    font-size: 1.35rem;
+  }
+
+  .header-center h2 {
+    font-size: 1.05rem;
+  }
+
+  .header-center h3 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .emblem {
+    width: 65px;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .header-center h1 {
+    font-size: 1.15rem;
+  }
+
+  .header-center h2 {
+    font-size: 0.95rem;
+  }
+
+  .header-center h3 {
+    font-size: 0.85rem;
+  }
+}

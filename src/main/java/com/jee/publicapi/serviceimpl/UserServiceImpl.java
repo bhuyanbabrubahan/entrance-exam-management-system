@@ -111,12 +111,18 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void updateLoginInfo(String email, HttpServletRequest request) {
-        User user = findByEmail(email);
+
+        User user = userRepository.findByEmail(email).orElse(null);
         if (user == null) return;
+
+
+        System.out.println("Updating login info for: " + email);
+        System.out.println("New Login Time: " + LocalDateTime.now());
+        System.out.println("New IP: " + getClientIp(request));
 
         user.setLastLoginTime(LocalDateTime.now());
         user.setLastLoginIp(getClientIp(request));
-        user.setFailedAttempts(0);
+
         userRepository.save(user);
     }
 
@@ -129,8 +135,19 @@ public class UserServiceImpl implements UserService {
     }
 
     private String getClientIp(HttpServletRequest request) {
+
         String xff = request.getHeader("X-Forwarded-For");
-        return (xff != null && !xff.isBlank()) ? xff.split(",")[0] : request.getRemoteAddr();
+
+        String ip = (xff != null && !xff.isBlank())
+                ? xff.split(",")[0]
+                : request.getRemoteAddr();
+
+        // Convert IPv6 localhost
+        if ("0:0:0:0:0:0:0:1".equals(ip)) {
+            ip = "127.0.0.1";
+        }
+
+        return ip;
     }
 
     @Override

@@ -1,0 +1,7 @@
+<svg width="180" height="40" viewBox="0 0 180 40" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="4" width="32" height="32" rx="4" fill="#007a8a"></rect>
+  <path d="M10 22l6 6 10-14" stroke="#fff" stroke-width="3" fill="none"></path>
+  <text x="45" y="26" font-family="Segoe UI, Arial" font-size="16" font-weight="600" fill="#003f4f">
+    JEE PUBLIC PORTAL
+  </text>
+</svg>

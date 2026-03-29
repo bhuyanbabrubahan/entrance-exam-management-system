@@ -1,0 +1,69 @@
+/* CONTAINER */
+.top-notice {
+  display: flex;
+  align-items: center;
+  background-color: #0b3c7d; /* Govt blue */
+  color: #ffffff;
+  height: 38px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* LEFT NOTICE LABEL */
+.notice-label {
+  background-color: #092f60;
+  padding: 0 16px;
+  font-weight: bold;
+  font-size: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+/* RIGHT SCROLL AREA */
+.notice-scroll {
+  flex: 1;
+  overflow: hidden;
+}
+
+/* MARQUEE */
+.notice-marquee {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 22s linear infinite;
+  white-space: nowrap;
+}
+
+/* NOTICE TEXT */
+.notice-item {
+  margin: 0 12px;
+  font-size: 14px;
+}
+
+/* SEPARATOR */
+.separator {
+  margin-left: 12px;
+}
+
+/* ANIMATION */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .notice-label {
+    font-size: 13px;
+    padding: 0 12px;
+  }
+
+  .notice-item {
+    font-size: 13px;
+  }
+}

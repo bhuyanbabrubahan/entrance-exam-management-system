@@ -1,0 +1,166 @@
+/* =========================================================
+   OTP VERIFICATION – GOVERNMENT STYLE
+   Matches Register.css look & feel
+   ========================================================= */
+
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000;
+}
+
+/* ================= WRAPPER ================= */
+.otp-wrapper {
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= CARD ================= */
+.otp-card {
+  background: #fff;
+  width: 100%;
+  max-width: 520px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 30px 32px;
+  text-align: center;
+}
+
+/* ================= HEADINGS ================= */
+.otp-card h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #0b3a6f;
+}
+
+.otp-email-text {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+/* ================= APPLICATION NUMBER ================= */
+.application-no {
+  margin: 12px 0 18px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e88e5;
+}
+
+/* ================= OTP INPUT ================= */
+.otp-input-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.otp-input-box input {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #cfcfcf;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.otp-input-box input:focus {
+  outline: none;
+  background: #eaf2ff;
+  border-color: #9db7dd;
+}
+
+/* ================= BUTTONS ================= */
+.otp-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.otp-verify-btn,
+.otp-resend-btn {
+  height: 36px;
+  min-width: 160px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.otp-verify-btn {
+  background: #0b3a6f;
+  color: #fff;
+}
+
+.otp-resend-btn {
+  background: #f2f2f2;
+  color: #0b3a6f;
+  border: 1px solid #cfcfcf;
+}
+
+.otp-resend-btn:disabled {
+  cursor: not-allowed;
+  color: #999;
+}
+
+/* ================= TOAST MESSAGE ================= */
+.toast {
+  position: fixed;
+  top: 200px; /* UPDATED: moved down from 20px to 350px for better placement under header */
+  left: 50%; /* UPDATED: center horizontally */
+  transform: translateX(-50%); /* UPDATED: center horizontally */
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 9999;
+  animation: fadeInOut 2.5s ease-in-out;
+}
+
+.toast.success {
+  background: #e6f4ea;
+  color: #1b5e20;
+  border: 1px solid #66bb6a;
+}
+
+.toast.error {
+  background: #fdecea;
+  color: #b71c1c;
+  border: 1px solid #ef5350;
+}
+
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-6px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .otp-wrapper {
+    padding: 20px;
+  }
+
+  .otp-card {
+    padding: 22px;
+  }
+
+  .otp-input-box input {
+    width: 38px;
+    height: 38px;
+  }
+
+  .otp-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,38 @@
+.admin-topbar {
+  height: 60px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.topbar-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.admin-user {
+  font-size: 14px;
+  color: #555;
+}
+
+.logout-btn {
+  padding: 6px 12px;
+  background-color: #ef4444;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.logout-btn:hover {
+  background-color: #dc2626;
+}

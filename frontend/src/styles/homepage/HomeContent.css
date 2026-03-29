@@ -1,0 +1,87 @@
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  background: #ffffff;
+  padding: 30px 0;
+}
+
+/* GRID LAYOUT */
+.home-grid {
+  width: 1130px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* EQUAL HEIGHT ANIMATION */
+.home-grid > * {
+  height: 100%;
+  transition: min-height 0.3s ease;
+}
+
+/* RIGHT COLUMN (STICKY) */
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 90px; /* below headers */
+}
+
+/* AUTO HEIGHT BALANCE */
+.right-column > * {
+  flex: 1;
+}
+
+/* 📱 MOBILE STACKED */
+@media (max-width: 992px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right-column {
+    position: static;
+  }
+}
+
+/* =====================================================
+   PUBLIC NOTICES / NEWS & EVENTS TABS COLORS
+   ===================================================== */
+.notice-tabs button {
+  padding: 5px 12px;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-bottom: none;
+  cursor: pointer;
+  color: #ffffff; /* white text */
+  font-weight: 500;
+}
+
+/* ACTIVE / SELECTED TAB COLORS */
+.notice-tabs button.active {
+  font-weight: 600;
+}
+
+/* DARK GREEN for Public Notices */
+.notice-tabs button.active:nth-child(1) {
+  background-color: #1b5e20; /* dark green */
+}
+
+/* DARK BLUE for News & Events */
+.notice-tabs button.active:nth-child(2) {
+  background-color: #0d47a1; /* dark blue */
+}
+
+/* NON-ACTIVE BUTTON COLORS */
+.notice-tabs button:not(.active):nth-child(1) {
+  background-color: #388e3c; /* lighter green */
+}
+
+.notice-tabs button:not(.active):nth-child(2) {
+  background-color: #1565c0; /* lighter blue */
+}
+
+.notice-tabs button:hover {
+  opacity: 0.9;
+}

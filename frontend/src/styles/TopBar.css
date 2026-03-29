@@ -1,0 +1,113 @@
+/* =========================
+   TOP BAR MAIN CONTAINER
+   ========================= */
+.topbar {
+  display: flex;                    /* Left & right sections in one row */
+  justify-content: space-between;   /* Space between left and right */
+  align-items: center;              /* Vertical center alignment */
+  background-color: #eeeeee;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 6px 16px;
+  font-family: Arial, "Noto Sans Devanagari", sans-serif;
+  color: #000;
+  white-space: nowrap;              /* Prevent line breaks */
+}
+
+/* =========================
+   LEFT SECTION (Govt Text)
+   ========================= */
+.topbar-left {
+  display: flex;                    /* Texts in same line */
+  gap: 12px;                        /* Space between texts */
+  font-weight: 600;
+  align-items: center;              /* Vertical center */
+}
+
+/* =========================
+   RIGHT SECTION (Controls + Date)
+   ========================= */
+.topbar-right {
+  display: flex;                    /* Everything in one line */
+  align-items: center;              /* Vertical center */
+  gap: 16px;                        /* Proper spacing between items */
+  white-space: nowrap;              /* Never wrap to next line */
+}
+
+/* =========================
+   LANGUAGE SWITCH
+   ========================= */
+.lang-switch {
+  display: flex;                    /* English | हिंदी in one line */
+  align-items: center;
+  gap: 6px;
+  padding-bottom: 3%;
+}
+
+.lang-switch button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  color: #102c80;
+}
+
+.lang-switch button.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* =========================
+   FONT SIZE CONTROLS
+   ========================= */
+.font-controls {
+  display: flex;                    /* A− A A+ in one line */
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 3%;
+}
+
+.font-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  color: #ca1818;
+}
+
+.font-controls button:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   DATE & TIME
+   ========================= */
+.topbar-right span {
+  display: inline-flex;             /* Date & time inline */
+  align-items: center;
+  font-size: 13px;
+  
+}
+/* Adjust vertical position of | separator */
+.lang-switch span {
+  padding-top: 12%;
+  display: inline-block; /* Required for padding to work */
+}
+
+/* =========================
+   MOBILE VIEW
+   ========================= */
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;          /* Stack items vertically */
+    align-items: center;
+    gap: 6px;
+  }
+
+  .topbar-left,
+  .topbar-right {
+    justify-content: center;         /* Center align content */
+    flex-wrap: wrap;
+  }
+}

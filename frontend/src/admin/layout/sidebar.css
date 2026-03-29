@@ -1,0 +1,121 @@
+/* ================= SIDEBAR CONTAINER ================= */
+
+.admin-sidebar {
+  width: 260px;
+  height: 95.7vh;
+  background: linear-gradient(180deg, #1e293b, #0f172a);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ================= MOBILE BEHAVIOR ================= */
+
+@media (max-width: 768px) {
+  .admin-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+/* ================= HEADER ================= */
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo-text {
+  color: #38bdf8;
+}
+
+.close-btn {
+  display: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* Show close button on mobile */
+@media (max-width: 768px) {
+  .close-btn {
+    display: block;
+  }
+}
+
+/* ================= MENU ================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  flex: 1;
+}
+
+/* ================= LINKS ================= */
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 25px;
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.sidebar-icon {
+  font-size: 16px;
+}
+
+/* Hover effect */
+.sidebar-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  transform: translateX(6px);
+}
+
+/* Active link */
+.sidebar-link.active {
+  background: rgba(37, 99, 235, 0.18);
+  color: #38bdf8;
+}
+
+/* Animated left border indicator */
+.sidebar-link.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #2563eb;
+  border-radius: 0 4px 4px 0;
+}
+
+/* ================= FOOTER ================= */
+
+.sidebar-footer {
+  padding: 15px;
+  font-size: 12px;
+  text-align: center;
+  color: #94a3b8;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}

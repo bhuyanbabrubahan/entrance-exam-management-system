@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+
+/*========Global==========*/
+@media (max-width: 900px) {
+  .admin-sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .admin-header {
+    left: 0;
+  }
+
+  .admin-content {
+    margin-left: 0;
+    padding-top: 100px;
+  }
+}
+

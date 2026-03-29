@@ -46,6 +46,12 @@ public class PersonalDetails {
 
 	@Column(name = "gender", nullable = false)
 	private String gender;
+	
+	@Column(name = "category", nullable = false)
+	private String category; // GEN/OBC/SC/ST/EWS
+	
+	@Column(name = "disability", nullable = false)
+	private String disability; // Yes/No
 
 	@Column(name = "dob", nullable = false)
 	private LocalDate dob;
@@ -69,14 +75,12 @@ public class PersonalDetails {
 	@Column(name = "nationality", nullable = false)
 	private String nationality;
 
-	@Column(name = "category", nullable = false)
-	private String category; // GEN/OBC/SC/ST/EWS
+	
 
 	@Column(name = "marital_status", nullable = false)
 	private String maritalStatus; // Single/Married
 
-	@Column(name = "disability", nullable = false)
-	private String disability; // Yes/No
+	
 
 	/* ===== ADDRESS DETAILS (Editable) ===== */
 	@Column(name = "correspondence_address", nullable = false, length = 500)

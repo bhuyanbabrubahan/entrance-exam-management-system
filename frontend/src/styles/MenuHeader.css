@@ -1,0 +1,153 @@
+/* =====================================================
+   MAIN HEADER CONTAINER
+   Holds the navigation bar
+   ===================================================== */
+.main-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #0b3c7d;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+/* =====================================================
+   MAIN NAVIGATION BAR
+   Ensures all menu items stay in one line
+   ===================================================== */
+.main-nav {
+  display: flex;                 /* Horizontal alignment */
+  align-items: center;           /* Same height for all items */
+  gap: 28px;                     /* Space between menu items */
+  padding: 0 20px;
+  white-space: nowrap;           /* Prevent wrapping */
+}
+
+/* =====================================================
+   NAVIGATION LINKS (Home, About, Contact, Information)
+   ===================================================== */
+.main-nav a {
+  display: flex;                 /* Align text vertically */
+  align-items: center;
+  height: 32px;                  /* Same height as dropdown title */
+  text-decoration: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.main-nav a:hover {
+  color: #0b3c7d;
+}
+
+/* Active link styling */
+.main-nav a.active {
+  color: #0b3c7d;
+  font-weight: 600;
+}
+
+/* Underline animation */
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0b3c7d;
+  transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  width: 100%;
+}
+
+/* =====================================================
+   DROPDOWN CONTAINER
+   ===================================================== */
+.dropdown {
+  position: relative;
+  display: flex;                 /* Match NavLink layout */
+  align-items: center;
+  height: 32px;
+}
+
+/* =====================================================
+   DROPDOWN TITLE (Examination ▾)
+   Aligned exactly like other menu items
+   ===================================================== */
+.dropdown-title {
+  display: flex;
+  align-items: center;
+  height: 32px;                  /* SAME HEIGHT as links */
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.dropdown-title:hover {
+  color: #0b3c7d;
+}
+
+/* =====================================================
+   DROPDOWN MENU
+   Positioned slightly below the menu bar
+   ===================================================== */
+.dropdown-menu {
+  position: absolute;
+  top: 36px;                     /* Push dropdown down */
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  min-width: 180px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+/* =====================================================
+   DROPDOWN LINKS
+   ===================================================== */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f2f6fb;
+  color: #0b3c7d;
+}
+
+/* Active dropdown link */
+.dropdown-menu a.active {
+  font-weight: 600;
+  color: #0b3c7d;
+}
+
+/* =====================================================
+   MOBILE VIEW
+   ===================================================== */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+  }
+}

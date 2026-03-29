@@ -64,22 +64,28 @@ public class SecurityConfig {
                     "/error",
                     "/captcha/**",
                     "/api/auth/**",
+                 // ✅ ADD THIS LINE
+                    "/api/user/login",
                     "/api/user/register/**",
                     "/api/user/otp/**",   
                     "/api/user/basic-correction-update/**", 
+                    "/api/payment/**",
                     "/correction-files/**",
                     ("/files/**")
                 ).permitAll()
 
-                /* ---------- ADMIN ---------- */
+                /* PAGE SESSION (ADMIN + USER) */
+                .requestMatchers("/api/user/page-session/**")
+                .hasAnyRole("ADMIN","USER")
+
+                /* ADMIN */
                 .requestMatchers("/api/admin/**")
                 .hasRole("ADMIN")
 
-                /* ---------- USER ---------- */
+                /* USER */
                 .requestMatchers("/api/user/**")
                 .hasRole("USER")
 
-                /* ---------- EVERYTHING ELSE ---------- */
                 .anyRequest().authenticated()
             )
 

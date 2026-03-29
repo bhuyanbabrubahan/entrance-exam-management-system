@@ -1,0 +1,275 @@
+/* ======================================================
+   DOCUMENT DETAILS PAGE
+   (MATCHES EDUCATION DETAILS DESIGN)
+   ====================================================== */
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+/* ================= INFO BOX ================= */
+
+.info-box {
+  background: #f9fafb;
+  border-left: 4px solid #2563eb;
+  padding: 12px 16px;
+  border-radius: 6px;
+  margin-bottom: 25px;
+}
+
+.info-box ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.info-box li {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+/* ================= DOCUMENT CARD ================= */
+
+.doc-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.doc-card label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+/* ================= FILE PREVIEW ================= */
+
+.doc-card img {
+  max-width: 180px;
+  max-height: 140px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.file-name {
+  display: inline-block;
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+/* ================= FILE INPUT ================= */
+
+.doc-card input[type="file"] {
+  font-size: 13px;
+  padding: 6px;
+  border: 1px dashed #d1d5db;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.doc-card input[type="file"]:hover {
+  border-color: #2563eb;
+}
+
+/* ================= ACTION BUTTONS ================= */
+
+.action-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.btn {
+  min-width: 160px;
+  padding: 10px 20px;
+  white-space: nowrap;  /* prevent text break */
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.save {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.btn.save:hover {
+  background: #bae6fd;
+}
+
+.btn.submit {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.btn.submit:hover {
+  background: #1d4ed8;
+}
+
+.back-dashboard-btn {
+  min-width: auto;        /* remove fixed minimum */
+  white-space: nowrap;    /* keep text in one line */
+  padding: 10px 20px;     /* slightly better spacing */
+}
+
+/* ================= LOCKED INFO ================= */
+
+.locked-info {
+  margin-top: 30px;
+  padding: 14px;
+  background: #fef2f2;
+  color: #991b1b;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ================= INFO CARD (HEADER BLOCK) ================= */
+
+.info-card {
+  width: 95%;
+  max-width: 1320px;
+  margin: -25px auto 15px auto;
+  padding: 15px 20px;
+  background: #fffbea;
+  border-left: 5px solid #f0ad4e;
+  border-radius: 6px;
+}
+
+/* Header row → LEFT title | RIGHT status */
+.info-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Title */
+.info-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Description */
+.info-card p {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* ================= STATUS PILL (AUTHORITATIVE) ================= */
+
+.status-pill {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Completed */
+.status-pill.completed {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+/* Not completed */
+.status-pill.not_completed {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.status-label {
+  color: #000;
+  margin-right: 5px;
+}
+
+/* ================= LOADING ================= */
+
+.dashboard-loading {
+  text-align: center;
+  font-size: 15px;
+  padding: 40px;
+  color: #6b7280;
+}
+
+/* ================= LOCK ROW ================= */
+
+.lock-row.single-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+/* 🔒 Locked button */
+.lock-row.single-line .lock-btn {
+  white-space: nowrap;
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+}
+
+/* ⬅ Back button */
+.lock-row.single-line .back-dashboard-btn {
+  white-space: nowrap;
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= PAGE TITLE ================= */
+
+.page-title {
+  text-align: center;
+  margin: 25px 0 15px;
+}
+
+.page-title h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #0b4fa2;
+}
+
+.page-title h3 {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #444;
+}
+
+.correction-banner {
+  background: #e6f7ff;
+  border: 1px solid #1890ff;
+  color: #003a8c;
+  padding: 12px;
+  margin: 15px auto;
+  width: 90%;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 6px;
+}

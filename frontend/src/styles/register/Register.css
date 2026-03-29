@@ -1,0 +1,302 @@
+/* =========================================================
+   GOVERNMENT REGISTRATION FORM – FINAL CENTERED VERSION
+   - Outer spacing (top/bottom/left/right)
+   - Inputs & selects ~60%
+   - Clean govt form alignment
+   - Confirm/Edit buttons, OTP box & masked email styled
+   - Added document upload styling
+   ========================================================= */
+
+/* ================= BASE PAGE ================= */
+body {
+  margin: 0;
+  background: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #000;
+}
+
+/* ================= PAGE WRAPPER ================= */
+.register-wrapper {
+  padding: 40px 60px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= MAIN FORM CARD ================= */
+.register-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 1050px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding: 30px 40px 34px;
+  position: relative;
+}
+
+/* ================= HEADINGS ================= */
+.register-card h4 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1e88e5;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.register-card h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+/* ================= ROW SYSTEM ================= */
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 18px;
+}
+
+.row.single {
+  grid-template-columns: 1fr;
+  font-size: 11px;
+}
+
+.custom-select {
+  width: 333px;
+  height: 35px;
+  font-size: 13px;
+  padding: 5px;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+}
+
+.custom-select.small {
+  width: 335px;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+}
+
+
+/* ================= INPUT & SELECT ================= */
+input,
+select {
+  width: 60%;
+  height: 34px;
+  border: 1px solid #cfcfcf;
+  padding: 5px 8px;
+  font-size: 13px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 3px;
+  text-align: center;
+}
+
+input:focus,
+select:focus {
+  background: #eaf2ff;
+  outline: none;
+  border-color: #9db7dd;
+}
+
+select {
+  appearance: auto;
+  width: 60%;
+}
+
+select option {
+  font-size: 13px;
+  padding: 5px 8px;
+  line-height: 24px;
+}
+
+/* ================= CAPTCHA ================= */
+.captcha-box {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* updated: smaller gap */
+  margin-bottom: 18px;
+}
+
+.captcha-box img {
+  height: 34px;
+  width: 140px; /* updated: smaller width */
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+}
+
+.captcha-box input {
+  width: 28%; /* updated: smaller width for compact design */
+  height: 34px;
+  border-radius: 3px;
+  border: 1px solid #cfcfcf;
+  text-align: center;
+  font-size: 13px;
+}
+
+.captcha-refresh-btn {
+  width: 34px; /* updated: square width */
+  height: 34px; /* updated: square height */
+  border: none;
+  border-radius: 3px;
+  background: #0b3a6f;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  margin-top: -2px; /* updated: lift button slightly for alignment */
+}
+
+.captcha-placeholder {
+  width: 150px;  /* match your captcha img width */
+  height: 50px;  /* match your captcha img height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  color: #555;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+.captcha-refresh-btn:hover {
+  background: #1e88e5;
+}
+
+/* ================= VERIFY CAPTCHA BUTTON ================= */
+.primary-btn {
+  width: 120px; /* updated: smaller width for verify captcha */
+  height: 34px; /* updated: smaller height */
+  font-size: 13px; /* keep small font */
+  border-radius: 3px;
+  border: none;
+  background: #0b3a6f;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #1e88e5;
+}
+
+/* ================= DOCUMENT UPLOAD ================= */
+.document-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 18px;
+}
+
+.document-row input[type="file"] {
+  width: 60%;
+  height: 34px;
+  border: 1px solid #cfcfcf;
+  padding: 3px 8px;
+  font-size: 11px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+/* ================= CONFIRM / EDIT BUTTONS ================= */
+.confirm-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.confirm-actions button {
+  height: 36px;
+  min-width: 160px;
+  border: none;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.confirm-actions .primary-btn {
+  background: #0b3a6f;
+  color: #fff;
+}
+
+.confirm-actions .edit-btn {
+  background: #f44336;
+  color: #fff;
+}
+
+/* ================= TOAST / PAGE MESSAGE ================= */
+.page-message {
+  position: absolute;
+ top: 350px; /* UPDATED: moved down from 10px to 60px for better placement under header */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 18px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 9999;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-align: center;
+  width: auto;
+}
+
+.page-message.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #2e7d32;
+}
+
+.page-message.error {
+  background: #fdecea;
+  color: #c62828;
+  border: 1px solid #c62828;
+}
+
+.page-message.info {
+  background: #e3f2fd;
+  color: #1565c0;
+  border: 1px solid #1565c0;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .register-wrapper {
+    padding: 20px;
+  }
+
+  .register-card {
+    padding: 22px;
+  }
+
+  .row,
+  .document-row {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  select,
+  .document-row input[type="file"] {
+    width: 100%;
+  }
+
+  .captcha-box {
+    flex-wrap: wrap;
+  }
+
+  .captcha-box input,
+  .captcha-box img,
+  .captcha-refresh-btn {
+    width: 100%;
+  }
+
+  .confirm-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
